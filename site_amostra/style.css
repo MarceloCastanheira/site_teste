@@ -1,0 +1,232 @@
+/*
+  Este arquivo CSS contém estilos personalizados para complementar o Tailwind CSS.
+  Embora o Tailwind seja usado para a maioria dos estilos, alguns ajustes específicos
+  ou classes não-Tailwind podem ser adicionados aqui para um design mais completo.
+*/
+
+/* Estilos para o scroll suave ao clicar nos links da navegação */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos globais para o corpo do documento e tipografia */
+body {
+    -webkit-font-smoothing: antialiased; /* Suaviza a renderização de fontes no WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza a renderização de fontes no Firefox */
+    text-rendering: optimizeLegibility; /* Otimiza a legibilidade do texto */
+}
+
+/*
+  Ajustes para o container, garantindo que ele tenha um padding lateral
+  e um max-width para centralizar o conteúdo.
+  O Tailwind já oferece classes como `mx-auto` e `p-4` para isso,
+  mas esta é uma alternativa ou complemento.
+*/
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+}
+
+/* Estilos para títulos e subtítulos */
+h1, h2, h3 {
+    letter-spacing: -0.025em; /* Ajusta o espaçamento entre letras para um visual mais moderno */
+    line-height: 1.2; /* Reduz a altura da linha para títulos */
+}
+
+/* Estilos para parágrafos */
+p {
+    line-height: 1.7; /* Aumenta a altura da linha para melhor legibilidade em blocos de texto */
+}
+
+/*
+  Estilos para a seção hero, caso a imagem de fundo precise de um tratamento especial
+  ou sobreposição de cores que não são facilmente alcançadas apenas com classes Tailwind.
+*/
+.hero {
+    /* Exemplo de sobreposição de cor se a imagem de fundo for muito clara */
+    /* Adiciona um gradiente sutil sobre a imagem de fundo para melhorar o contraste do texto */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Necessário para posicionar a imagem de fundo corretamente */
+    overflow: hidden; /* Garante que nada transborde */
+}
+
+.hero img {
+    /* Garante que a imagem de fundo se ajuste e ocupe todo o espaço */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+/*
+  Estilos para os itens do portfólio, adicionando mais profundidade e interatividade.
+*/
+.product-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #e2e8f0; /* Borda sutil */
+    background-color: #ffffff; /* Fundo branco para os itens */
+    border-radius: 0.75rem; /* Bordas mais arredondadas */
+    overflow: hidden;
+}
+
+.product-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Leve levantamento e aumento no hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Sombra mais pronunciada no hover */
+}
+
+.product-item img {
+    border-bottom: 1px solid #f1f5f9; /* Borda inferior mais clara para a imagem */
+}
+
+/*
+  Estilos para o formulário de contato, com foco em usabilidade e feedback visual.
+*/
+#contato form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border-radius: 0.75rem; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave */
+    padding: 2.5rem; /* Padding aumentado */
+}
+
+#contato form label {
+    color: #4a5568; /* Cor do texto do label */
+    font-size: 1.05rem; /* Tamanho da fonte ligeiramente maior */
+}
+
+#contato form input[type="text"],
+#contato form input[type="email"],
+#contato form textarea {
+    border: 1px solid #cbd5e0; /* Borda padrão */
+    padding: 0.85rem 1rem; /* Padding ajustado */
+    font-size: 1rem; /* Tamanho da fonte padrão */
+    border-radius: 0.5rem; /* Bordas mais arredondadas */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato form input[type="text"]:focus,
+#contato form input[type="email"]:focus,
+#contato form textarea:focus {
+    border-color: #3b82f6; /* Cor do foco azul */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Anel de foco sutil */
+    outline: none; /* Remove o outline padrão do navegador */
+}
+
+#contato form button[type="submit"] {
+    font-size: 1.15rem; /* Tamanho da fonte do botão maior */
+    padding: 1rem 1.5rem; /* Padding do botão ajustado */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o botão */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#contato form button[type="submit"]:hover {
+    transform: translateY(-2px); /* Leve levantamento no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+}
+
+/*
+  Estilos para o rodapé, com um toque mais elegante.
+*/
+footer {
+    background-color: #2d3748; /* Cor de fundo mais escura para o rodapé */
+    color: #e2e8f0; /* Cor do texto mais clara */
+    padding: 2.5rem 0; /* Padding aumentado */
+    font-size: 0.95rem; /* Tamanho da fonte ligeiramente maior */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para o botão flutuante do WhatsApp */
+.fixed.bottom-6.right-6 {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada para o botão fixo */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.fixed.bottom-6.right-6:hover {
+    transform: scale(1.15); /* Aumenta um pouco mais no hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); /* Sombra ainda mais forte */
+}
+
+/*
+  Responsividade: Embora o Tailwind seja "mobile-first" e use breakpoints,
+  você pode adicionar media queries aqui para ajustes muito específicos
+  que não são facilmente manipuláveis com as classes do Tailwind.
+*/
+@media (max-width: 768px) {
+    /* Ajustes para a seção hero em telas menores */
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        min-height: 400px;
+    }
+    .hero h2 {
+        font-size: 2.5rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes para a navegação em telas menores */
+    header nav ul {
+        justify-content: center;
+        padding-top: 10px; /* Espaçamento extra no topo para mobile */
+    }
+    header nav ul li {
+        margin-bottom: 8px; /* Espaçamento entre itens da lista empilhados */
+    }
+
+    /* Ajustes para a seção "Sobre Nós" em telas menores */
+    #sobre .history-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    #sobre .history-content img {
+        margin-bottom: 20px;
+    }
+    #sobre .history-content div {
+        min-width: unset; /* Remove o min-width para mobile */
+    }
+    #sobre .history-content h3 {
+        text-align: center;
+    }
+
+    /* Ajustes para o portfólio em telas menores */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    /* Ajustes para o formulário de contato em telas menores */
+    #contato form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes ainda menores para dispositivos muito pequenos */
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .fixed.bottom-6.right-6 {
+        width: 56px; /* Reduz o tamanho do botão fixo */
+        height: 56px;
+        bottom: 1rem; /* Ajusta a posição para telas muito pequenas */
+        right: 1rem;
+    }
+    .fixed.bottom-6.right-6 svg {
+        width: 28px; /* Reduz o tamanho do ícone */
+        height: 28px;
+    }
+}

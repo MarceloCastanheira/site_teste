@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Empresa - Portfólio e História</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Links para a fonte 'Inter' do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+    <!-- Seção de Cabeçalho (Header) -->
+    <header class="bg-blue-800 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <h1 class="text-3xl font-bold mb-4 md:mb-0 md:mr-auto">Nome da Empresa</h1>
+            <!-- Navegação: centralizada em todas as telas -->
+            <nav class="w-full md:w-auto md:flex-grow flex justify-center">
+                <ul class="flex flex-row flex-wrap justify-center space-x-4 text-lg md:space-x-8">
+                    <li><a href="#home" class="hover:text-blue-300 transition duration-300 rounded-md p-2">Início</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-300 transition duration-300 rounded-md p-2">Sobre Nós</a></li>
+                    <li><a href="#portfolio" class="hover:text-blue-300 transition duration-300 rounded-md p-2">Portfólio</a></li>
+                    <li><a href="#localizacao" class="hover:text-blue-300 transition duration-300 rounded-md p-2">Localização</a></li>
+                    <li><a href="#contato" class="hover:text-blue-300 transition duration-300 rounded-md p-2">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hidden md:block md:ml-auto md:w-0"></div> <!-- Div vazia para balancear o centralização no desktop -->
+        </div>
+    </header>
+
+    <!-- Seção Hero (Início) -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-24 md:py-32 flex items-center justify-center min-h-[500px] overflow-hidden">
+        <!-- Imagem de fundo com fallback -->
+        <img src="https://placehold.co/1920x1080/007bff/ffffff?text=Sua+Imagem+de+Fundo"
+             onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/007bff/ffffff?text=Imagem+Indisponível';"
+             alt="Imagem de fundo abstrata" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="container mx-auto text-center relative z-10 p-4">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Bem-vindo ao Nosso Mundo de Inovação</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Descubra nossos produtos incríveis e a jornada por trás da nossa empresa, construída com paixão e excelência.</p>
+            <a href="#portfolio" class="inline-block bg-white text-blue-800 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">Ver Portfólio</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós (História da Empresa) -->
+    <section id="sobre" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto p-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-800">Nossa História</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- Imagem da história da empresa com fallback -->
+                    <img src="https://placehold.co/600x400/87CEEB/000000?text=História+da+Empresa"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/87CEEB/000000?text=Imagem+Indisponível';"
+                         alt="Imagem representativa da história da empresa"
+                         class="rounded-xl shadow-xl max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed">
+                    <h3 class="text-3xl font-semibold mb-6 text-blue-700">Onde tudo começou...</h3>
+                    <p class="mb-4">
+                        A <span class="font-bold">[Nome da Empresa]</span> nasceu em <span class="font-bold">[Ano de Fundação]</span>, com a visão de <span class="italic">[Visão da empresa, ex: revolucionar o mercado de tecnologia com soluções inovadoras]</span>. Desde então, temos nos dedicado a <span class="italic">[O que a empresa faz, ex: desenvolver produtos de alta qualidade e oferecer um atendimento excepcional]</span> com paixão e excelência. Nossa jornada é marcada por <span class="font-semibold">[cite um ou dois marcos importantes, ex: a introdução do produto X em 20XX, a expansão para o mercado internacional em 20YY]</span>.
+                    </p>
+                    <p>
+                        Acreditamos que <span class="font-bold">[cite um valor fundamental da empresa, ex: a inovação contínua, a sustentabilidade, a satisfação do cliente]</span> é o pilar do nosso sucesso. Continuamos a evoluir, sempre buscando <span class="italic">[cite um objetivo futuro, ex: novas tecnologias, expandir nossos mercados, aprimorar a experiência do usuário]</span> para superar as expectativas de nossos clientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Portfólio de Produtos -->
+    <section id="portfolio" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto p-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-800">Nosso Portfólio de Produtos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item de Produto 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <!-- Imagem do produto com fallback -->
+                    <img src="https://placehold.co/400x250/FFD700/000000?text=Produto+1"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/FFD700/000000?text=Imagem+Indisponível';"
+                         alt="Imagem do Produto 1" class="w-full h-52 object-cover border-b border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-blue-700">Nome do Produto 1</h3>
+                        <p class="text-gray-600 mb-5 text-base">Breve descrição do produto 1. Destaque características ou benefícios principais, como durabilidade, design inovador ou funcionalidade.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Item de Produto 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <!-- Imagem do produto com fallback -->
+                    <img src="https://placehold.co/400x250/ADFF2F/000000?text=Produto+2"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/ADFF2F/000000?text=Imagem+Indisponível';"
+                         alt="Imagem do Produto 2" class="w-full h-52 object-cover border-b border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-blue-700">Nome do Produto 2</h3>
+                        <p class="text-gray-600 mb-5 text-base">Breve descrição do produto 2. Destaque características ou benefícios principais, como eficiência energética, facilidade de uso ou sustentabilidade.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Item de Produto 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <!-- Imagem do produto com fallback -->
+                    <img src="https://placehold.co/400x250/FF6347/000000?text=Produto+3"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/FF6347/000000?text=Imagem+Indisponível';"
+                         alt="Imagem do Produto 3" class="w-full h-52 object-cover border-b border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-blue-700">Nome do Produto 3</h3>
+                        <p class="text-gray-600 mb-5 text-base">Breve descrição do produto 3. Destaque características ou benefícios principais, como design elegante, alta performance ou versatilidade.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Adicione mais itens de produto conforme necessário, seguindo a mesma estrutura -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Localização -->
+    <section id="localizacao" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto p-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-800">Nossa Localização</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- Google Maps Embed - Substitua o src pelo seu próprio link de incorporação do Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.485122501004!2d-46.6346533844075!3d-23.55051998468767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce592c3a0b3f7f%3A0x6d9f5e4d2a1c0d7!2sAv.%20Paulista%2C%201578%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200%2C%20Brazil!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-xl shadow-xl w-full h-64 md:h-96"></iframe>
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed">
+                    <h3 class="text-3xl font-semibold mb-6 text-blue-700">Venha nos Visitar!</h3>
+                    <p class="mb-4">
+                        Estamos localizados em um ponto estratégico para melhor atendê-lo. Sinta-se à vontade para nos visitar em nosso endereço:
+                    </p>
+                    <address class="not-italic font-semibold text-gray-700">
+                        [Endereço da Empresa]<br>
+                        [Cidade], [Estado], [CEP]<br>
+                        [País]
+                    </address>
+                    <p class="mt-4">
+                        Nosso horário de funcionamento é de [Horário de Início] a [Horário de Fim], de [Dia da Semana Início] a [Dia da Semana Fim].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto p-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-800">Entre em Contato</h2>
+            <p class="text-center text-lg mb-10 max-w-2xl mx-auto">Ficou interessado em nossos produtos ou quer saber mais sobre nossa empresa? Entre em contato via WhatsApp!</p>
+            <div class="flex flex-col md:flex-row gap-8 max-w-3xl mx-auto justify-center">
+                <!-- O bloco do formulário foi removido daqui -->
+                <div class="flex-1 flex flex-col items-center justify-center bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-700">Fale Conosco pelo WhatsApp</h3>
+                    <p class="text-gray-600 mb-8 text-base">Prefere uma comunicação mais rápida? Clique no botão abaixo para nos enviar uma mensagem direta pelo WhatsApp.</p>
+                    <!-- Botão do WhatsApp - Substitua o número de telefone e a mensagem -->
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20produtos."
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-green-500 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105">
+                        <!-- Ícone do WhatsApp (logo oficial) - AGORA É UMA IMAGEM -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+                             onerror="this.onerror=null;this.src='https://placehold.co/100x100/25D366/ffffff?text=WA';"
+                             alt="WhatsApp Logo"
+                             class="w-8 h-8 md:w-10 md:h-10 mr-3 object-contain">
+                        Conversar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-blue-800 text-white py-8 text-center">
+        <div class="container mx-auto p-4">
+            <p class="text-lg">&copy; 2025 Nome da Empresa. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com <span class="text-red-400">&hearts;</span> para você.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Fixo do WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20produtos."
+       target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-110 z-50 flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
+        <!-- Ícone do WhatsApp (logo oficial) - AGORA É UMA IMAGEM -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+             onerror="this.onerror=null;this.src='https://placehold.co/100x100/25D366/ffffff?text=WA';"
+             alt="WhatsApp Logo"
+             class="w-full h-full object-contain">
+    </a>
+
+    <!-- Botão Fixo para Subir a Página -->
+    <button id="scrollToTopBtn"
+            class="fixed bottom-6 left-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 z-50 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 opacity-0 invisible">
+        <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L4.5 9.5h5v12h5v-12h5z"/>
+        </svg>
+    </button>
+
+    <script>
+        // JavaScript para o botão "Subir ao Topo"
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Mostra ou esconde o botão baseado na posição da rolagem
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        };
+
+        // Rola suavemente para o topo quando o botão é clicado
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+</html>
